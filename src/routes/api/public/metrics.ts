@@ -9,7 +9,7 @@ import { supabaseAdmin } from "@/integrations/supabase/client.server";
 //     metrics_path: /api/public/metrics
 //     scheme: https
 //     static_configs:
-//       - targets: ['ajuda-mei.lovable.app']
+//       - targets: ['localhost:3000']
 
 export const Route = createFileRoute("/api/public/metrics")({
   server: {

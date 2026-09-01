@@ -1,11 +1,11 @@
-// k6 smoke + load test — execute fora do Lovable.
+// k6 smoke + load test — execute contra uma instância implantada do sistema.
 //
 //   bun add -g k6  (ou: brew install k6)
 //   k6 run tests/load/k6-smoke.js                     # smoke
 //   k6 run -e VUS=50 -e DURATION=2m tests/load/k6-smoke.js   # load
 //
 // Variáveis:
-//   BASE_URL  — default https://ajuda-mei.lovable.app
+//   BASE_URL  — default http://localhost:3000
 //   VUS       — usuários virtuais (default 5)
 //   DURATION  — duração (default 30s)
 
@@ -16,7 +16,7 @@ import { Rate, Trend } from "k6/metrics";
 const errors = new Rate("errors");
 const ttfb = new Trend("ttfb_ms");
 
-const BASE = __ENV.BASE_URL || "https://ajuda-mei.lovable.app";
+const BASE = __ENV.BASE_URL || "http://localhost:3000";
 const VUS = Number(__ENV.VUS || 5);
 const DURATION = __ENV.DURATION || "30s";
 

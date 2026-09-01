@@ -8,10 +8,8 @@ info:
     autenticados via Bearer Token Supabase. Endpoints públicos vivem
     em `/api/public/*` e não exigem sessão de usuário.
 servers:
-  - url: https://ajuda-mei.lovable.app
-    description: Produção
-  - url: https://id-preview--b9e4bb3e-d0a0-4f99-9cb0-eaab29cc94cd.lovable.app
-    description: Preview
+  - url: http://localhost:3000
+    description: Ambiente local
 security:
   - bearerAuth: []
 tags:

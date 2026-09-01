@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportClientError } from "../lib/error-reporting";
 import { AuthProvider } from "../lib/auth-context";
 import { supabase } from "../integrations/supabase/client";
 import { Toaster } from "../components/ui/sonner";
@@ -41,7 +41,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportClientError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
@@ -84,8 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "Sala do Empreendedor" },
       { name: "twitter:description", content: "Atendimento inteligente para o Microempreendedor Individual (MEI)." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9b3a6cdb-ea9c-4b18-a57e-068364cd2fac/id-preview-08aa7609--b9e4bb3e-d0a0-4f99-9cb0-eaab29cc94cd.lovable.app-1780203522335.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9b3a6cdb-ea9c-4b18-a57e-068364cd2fac/id-preview-08aa7609--b9e4bb3e-d0a0-4f99-9cb0-eaab29cc94cd.lovable.app-1780203522335.png" },
+      { property: "og:image", content: "/icon-512.svg" },
+      { name: "twitter:image", content: "/icon-512.svg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],

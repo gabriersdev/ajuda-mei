@@ -63,7 +63,7 @@ export function ChatWidget() {
         queryClient.invalidateQueries({ queryKey: ["my-tickets"] });
         setMessages(m => [...m, {
           role: "system",
-          text: `Não encontrei uma resposta direta na base. Abri o ticket ${ticket.protocolo} — um atendente vai retornar em breve.`,
+          text: `Não encontrei uma resposta direta na base. Abri o ticket ${ticket.protocolo} - um atendente vai retornar em breve.`,
         }]);
       }
     } catch (err) {

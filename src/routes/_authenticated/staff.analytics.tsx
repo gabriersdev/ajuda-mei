@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { downloadCSV, toCSV } from "@/lib/csv";
 
 export const Route = createFileRoute("/_authenticated/staff/analytics")({
-  head: () => ({ meta: [{ title: "Analytics — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "Analytics - Atendimento" }] }),
   component: AnalyticsPage,
 });
 
@@ -77,7 +77,7 @@ function AnalyticsPage() {
         <section className="rounded-xl border border-border bg-card p-5">
           <div className="flex items-center gap-2">
             <Star className="h-4 w-4 text-primary" />
-            <h2 className="font-medium">Satisfação (NPS — últimos 30d)</h2>
+            <h2 className="font-medium">Satisfação (NPS - últimos 30d)</h2>
           </div>
           {nps.total === 0 ? (
             <p className="mt-3 text-sm text-muted-foreground">Sem avaliações no período.</p>

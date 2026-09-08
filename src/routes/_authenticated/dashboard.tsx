@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { usePageView } from "@/lib/use-analytics";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
-  head: () => ({ meta: [{ title: "Início — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Início - Sala do Empreendedor" }] }),
   component: DashboardPage,
 });
 
@@ -75,7 +75,7 @@ function DashboardPage() {
             <StatCard label="Aguardando você" value={aguardando} icon={Bell} accent="warning" />
             <StatCard label="Tickets em aberto" value={abertos} icon={Ticket} accent="primary" />
             <StatCard label="Tickets totais" value={tickets?.length ?? 0} icon={FileText} accent="info" />
-            <StatCard label="Documentos" value="—" icon={FileText} accent="muted" />
+            <StatCard label="Documentos" value="-" icon={FileText} accent="muted" />
           </>
         )}
       </div>

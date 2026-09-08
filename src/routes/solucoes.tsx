@@ -15,7 +15,7 @@ import { SolutionFeedback } from "@/components/solutions/SolutionFeedback";
 export const Route = createFileRoute("/solucoes")({
   head: () => ({
     meta: [
-      { title: "Soluções para MEI — Sala do Empreendedor" },
+      { title: "Soluções para MEI - Sala do Empreendedor" },
       { name: "description", content: "Procedimentos oficiais passo a passo: DAS, declaração anual, regularização e mais. Acesso público." },
       { property: "og:title", content: "Soluções para MEI" },
       { property: "og:description", content: "Procedimentos oficiais para o Microempreendedor Individual." },

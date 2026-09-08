@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 
-// Listagem pública de setores ativos. Sem auth — usada na landing/exploração.
+// Listagem pública de setores ativos. Sem auth - usada na landing/exploração.
 export const listSectorsPublic = createServerFn({ method: "GET" }).handler(async () => {
   const { data, error } = await supabaseAdmin
     .from("sectors")

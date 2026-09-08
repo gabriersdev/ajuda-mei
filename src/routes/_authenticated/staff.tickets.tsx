@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/staff/tickets")({
-  head: () => ({ meta: [{ title: "Fila — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "Fila - Atendimento" }] }),
   component: StaffTicketsPage,
 });
 

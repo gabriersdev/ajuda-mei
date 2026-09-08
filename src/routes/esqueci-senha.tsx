@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/esqueci-senha")({
-  head: () => ({ meta: [{ title: "Recuperar senha — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Recuperar senha - Sala do Empreendedor" }] }),
   component: ForgotPasswordPage,
 });
 

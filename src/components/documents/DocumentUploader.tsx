@@ -397,7 +397,7 @@ export function DocumentUploader({ ticketId, protocolId, onUploaded }: Props) {
           </div>
 
           <div role="note" className="rounded-md border border-amber-500/30 bg-amber-50 p-3 text-xs text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">
-            O OCR é uma sugestão automática. Revise os campos — toda validação final é feita por uma pessoa do atendimento.
+            O OCR é uma sugestão automática. Revise os campos - toda validação final é feita por uma pessoa do atendimento.
           </div>
 
           <div className="flex flex-wrap justify-end gap-2">

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/perfil")({
-  head: () => ({ meta: [{ title: "Meu perfil — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Meu perfil - Sala do Empreendedor" }] }),
   component: PerfilPage,
 });
 
@@ -55,7 +55,7 @@ function PerfilPage() {
 
       <form onSubmit={submit} className="space-y-4 rounded-xl border border-border bg-card p-5">
         <Field label="E-mail" value={profile?.email ?? ""} readOnly />
-        <Field label="Status" value={profile?.status ?? "—"} readOnly />
+        <Field label="Status" value={profile?.status ?? "-"} readOnly />
         <Field label="Nome" value={nome} onChange={setNome} required maxLength={120} />
         <Field label="Telefone" value={telefone} onChange={setTelefone} placeholder="(11) 99999-9999" />
         <Field label="CNPJ" value={cnpj} onChange={setCnpj} placeholder="00.000.000/0001-00" />

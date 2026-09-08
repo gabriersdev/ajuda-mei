@@ -15,7 +15,7 @@ import { FullPageLoader } from "@/components/layout/FullPageLoader";
 
 export const Route = createFileRoute("/_authenticated")({
   // Auth is gated client-side via useAuth() (status-aware, hydration-safe).
-  // Never throw redirect() in beforeLoad based on a stale token — it caused
+  // Never throw redirect() in beforeLoad based on a stale token - it caused
   // a dashboard ↔ login oscillation when the session hadn't hydrated yet.
   component: AuthenticatedLayout,
 });

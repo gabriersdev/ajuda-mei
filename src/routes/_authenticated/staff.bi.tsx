@@ -22,7 +22,7 @@ import { listSectorsPublic } from "@/lib/sectors-public.functions";
 import { downloadCSV, toCSV } from "@/lib/csv";
 
 export const Route = createFileRoute("/_authenticated/staff/bi")({
-  head: () => ({ meta: [{ title: "BI Operacional — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "BI Operacional - Atendimento" }] }),
   component: BIPage,
 });
 
@@ -388,7 +388,7 @@ function ChartCard({
       <div className="mb-3 flex items-center gap-2">
         <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
         <h2 className="text-sm font-medium">{title}</h2>
-        {subtitle && <span className="text-xs text-muted-foreground">— {subtitle}</span>}
+        {subtitle && <span className="text-xs text-muted-foreground">- {subtitle}</span>}
       </div>
       {children}
     </section>

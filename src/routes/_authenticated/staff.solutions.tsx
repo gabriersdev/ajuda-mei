@@ -11,7 +11,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/staff/solutions")({
-  head: () => ({ meta: [{ title: "Soluções — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "Soluções - Atendimento" }] }),
   component: StaffSolutionsPage,
 });
 

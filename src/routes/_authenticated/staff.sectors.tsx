@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/staff/sectors")({
-  head: () => ({ meta: [{ title: "Setores — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "Setores - Atendimento" }] }),
   component: SectorsPage,
 });
 
@@ -90,7 +90,7 @@ function SectorsPage() {
                 <tr key={s.id} className="border-t border-border hover:bg-card/40">
                   <td className="px-4 py-3 font-medium">{s.nome}</td>
                   <td className="px-4 py-3 text-muted-foreground">{s.categoria}</td>
-                  <td className="px-4 py-3 text-xs text-muted-foreground">{s.telefone || s.email || "—"}</td>
+                  <td className="px-4 py-3 text-xs text-muted-foreground">{s.telefone || s.email || "-"}</td>
                   <td className="px-4 py-3">
                     <span className={`rounded px-2 py-0.5 text-[10px] ${s.ativo ? "bg-success/15 text-success" : "bg-muted text-muted-foreground"}`}>
                       {s.ativo ? "ativo" : "inativo"}

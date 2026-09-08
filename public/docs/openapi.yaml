@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: Sala do Empreendedor — API
+  title: Sala do Empreendedor - API
   version: "1.0.0"
   description: |
     API pública e endpoints internos da Sala do Empreendedor (MEI).

@@ -11,7 +11,7 @@ type Props = {
 };
 
 /**
- * "Resolveu sua dúvida?" — feedback rápido de cada solução.
+ * "Resolveu sua dúvida?" - feedback rápido de cada solução.
  * Sim → agradece. Não → CTA para abrir atendimento.
  */
 export function SolutionFeedback({ solutionId, variant = "auth" }: Props) {

@@ -11,7 +11,7 @@ import { AttachmentPicker, AttachmentList, type Anexo } from "@/components/attac
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/staff/tickets/$id")({
-  head: () => ({ meta: [{ title: "Ticket — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "Ticket - Atendimento" }] }),
   component: TicketDetailPage,
 });
 

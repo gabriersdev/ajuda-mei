@@ -2,7 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
-// Cria URL assinada de upload — o caller envia o binário direto para o Storage.
+// Cria URL assinada de upload - o caller envia o binário direto para o Storage.
 export const createUploadUrl = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
   .inputValidator((d: { ticket_id: string; filename: string }) =>

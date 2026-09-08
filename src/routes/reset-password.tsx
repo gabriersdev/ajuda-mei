@@ -7,7 +7,7 @@ import { PasswordInput } from "@/components/ui/password-input";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/reset-password")({
-  head: () => ({ meta: [{ title: "Nova senha — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Nova senha - Sala do Empreendedor" }] }),
   component: ResetPasswordPage,
 });
 

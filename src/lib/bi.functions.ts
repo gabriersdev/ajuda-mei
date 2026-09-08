@@ -70,7 +70,7 @@ export const getBIDashboard = createServerFn({ method: "POST" })
     if (tErr) throw new Error(tErr.message);
     const T = tickets ?? [];
 
-    // Tickets abertos (snapshot atual) — ignora filtro de período pq é estado.
+    // Tickets abertos (snapshot atual) - ignora filtro de período pq é estado.
     let abertosQ = supabase
       .from("tickets")
       .select("id", { count: "exact", head: true })
@@ -181,7 +181,7 @@ export const getBIDashboard = createServerFn({ method: "POST" })
       sectorNames = new Map((secs ?? []).map((s: any) => [s.id, s.nome]));
     }
     const por_setor = Array.from(sectorMap.entries()).map(([id, total]) => ({
-      setor: id === "sem_setor" ? "Sem setor" : (sectorNames.get(id) ?? "—"),
+      setor: id === "sem_setor" ? "Sem setor" : (sectorNames.get(id) ?? "-"),
       total,
     })).sort((a, b) => b.total - a.total);
 

@@ -10,7 +10,7 @@ import { useAuth } from "@/lib/auth-context";
 import { MailWarning } from "lucide-react";
 
 export const Route = createFileRoute("/login")({
-  head: () => ({ meta: [{ title: "Entrar — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Entrar - Sala do Empreendedor" }] }),
   component: LoginPage,
 });
 
@@ -23,7 +23,7 @@ function LoginPage() {
   const [needsConfirmation, setNeedsConfirmation] = useState(false);
   const [resending, setResending] = useState(false);
 
-  // Redireciona apenas APÓS hidratação concluída — evita loop login↔dashboard.
+  // Redireciona apenas APÓS hidratação concluída - evita loop login↔dashboard.
   useEffect(() => {
     if (!authLoading && user) navigate({ to: "/dashboard", replace: true });
   }, [user, authLoading, navigate]);

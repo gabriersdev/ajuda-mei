@@ -6,7 +6,7 @@ import { useMyRoles } from "@/lib/use-roles";
 import { ShieldCheck } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/staff/audit")({
-  head: () => ({ meta: [{ title: "Auditoria LGPD — Atendimento" }] }),
+  head: () => ({ meta: [{ title: "Auditoria LGPD - Atendimento" }] }),
   component: AuditPage,
 });
 

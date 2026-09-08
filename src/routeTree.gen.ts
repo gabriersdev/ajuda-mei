@@ -9,56 +9,40 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SolucoesRouteImport } from './routes/solucoes'
-import { Route as SetoresRouteImport } from './routes/setores'
-import { Route as ResetPasswordRouteImport } from './routes/reset-password'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as EsqueciSenhaRouteImport } from './routes/esqueci-senha'
-import { Route as CadastroRouteImport } from './routes/cadastro'
-import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DocsApiRouteImport } from './routes/docs.api'
-import { Route as AuthenticatedTicketsRouteImport } from './routes/_authenticated/tickets'
-import { Route as AuthenticatedStaffRouteImport } from './routes/_authenticated/staff'
-import { Route as AuthenticatedSolutionsRouteImport } from './routes/_authenticated/solutions'
-import { Route as AuthenticatedPerfilRouteImport } from './routes/_authenticated/perfil'
-import { Route as AuthenticatedDocumentosRouteImport } from './routes/_authenticated/documentos'
+import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
+import { Route as CadastroRouteImport } from './routes/cadastro'
+import { Route as EsqueciSenhaRouteImport } from './routes/esqueci-senha'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as SetoresRouteImport } from './routes/setores'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
-import { Route as ApiPublicMetricsRouteImport } from './routes/api/public/metrics'
-import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
-import { Route as AuthenticatedTicketsIdRouteImport } from './routes/_authenticated/tickets.$id'
-import { Route as AuthenticatedStaffTicketsRouteImport } from './routes/_authenticated/staff.tickets'
-import { Route as AuthenticatedStaffSolutionsRouteImport } from './routes/_authenticated/staff.solutions'
-import { Route as AuthenticatedStaffSectorsRouteImport } from './routes/_authenticated/staff.sectors'
-import { Route as AuthenticatedStaffDocumentosRouteImport } from './routes/_authenticated/staff.documentos'
-import { Route as AuthenticatedStaffBiRouteImport } from './routes/_authenticated/staff.bi'
-import { Route as AuthenticatedStaffAuditRouteImport } from './routes/_authenticated/staff.audit'
+import { Route as AuthenticatedDocumentosRouteImport } from './routes/_authenticated/documentos'
+import { Route as AuthenticatedPerfilRouteImport } from './routes/_authenticated/perfil'
+import { Route as AuthenticatedSolutionsRouteImport } from './routes/_authenticated/solutions'
+import { Route as AuthenticatedStaffRouteImport } from './routes/_authenticated/staff'
+import { Route as AuthenticatedTicketsRouteImport } from './routes/_authenticated/tickets'
+import { Route as DocsApiRouteImport } from './routes/docs.api'
 import { Route as AuthenticatedStaffAnalyticsRouteImport } from './routes/_authenticated/staff.analytics'
+import { Route as AuthenticatedStaffAuditRouteImport } from './routes/_authenticated/staff.audit'
+import { Route as AuthenticatedStaffBiRouteImport } from './routes/_authenticated/staff.bi'
+import { Route as AuthenticatedStaffDocumentosRouteImport } from './routes/_authenticated/staff.documentos'
+import { Route as AuthenticatedStaffSectorsRouteImport } from './routes/_authenticated/staff.sectors'
+import { Route as AuthenticatedStaffSolutionsRouteImport } from './routes/_authenticated/staff.solutions'
+import { Route as AuthenticatedStaffTicketsRouteImport } from './routes/_authenticated/staff.tickets'
+import { Route as AuthenticatedTicketsIdRouteImport } from './routes/_authenticated/tickets.$id'
+import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
+import { Route as ApiPublicMetricsRouteImport } from './routes/api/public/metrics'
 import { Route as AuthenticatedStaffTicketsIdRouteImport } from './routes/_authenticated/staff.tickets.$id'
 
-const SolucoesRoute = SolucoesRouteImport.update({
-  id: '/solucoes',
-  path: '/solucoes',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SetoresRoute = SetoresRouteImport.update({
-  id: '/setores',
-  path: '/setores',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResetPasswordRoute = ResetPasswordRouteImport.update({
-  id: '/reset-password',
-  path: '/reset-password',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsqueciSenhaRoute = EsqueciSenhaRouteImport.update({
-  id: '/esqueci-senha',
-  path: '/esqueci-senha',
+const AuthenticatedRoute = AuthenticatedRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CadastroRoute = CadastroRouteImport.update({
@@ -66,38 +50,34 @@ const CadastroRoute = CadastroRouteImport.update({
   path: '/cadastro',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRoute = AuthenticatedRouteImport.update({
-  id: '/_authenticated',
+const EsqueciSenhaRoute = EsqueciSenhaRouteImport.update({
+  id: '/esqueci-senha',
+  path: '/esqueci-senha',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DocsApiRoute = DocsApiRouteImport.update({
-  id: '/docs/api',
-  path: '/docs/api',
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedTicketsRoute = AuthenticatedTicketsRouteImport.update({
-  id: '/tickets',
-  path: '/tickets',
-  getParentRoute: () => AuthenticatedRoute,
+const SetoresRoute = SetoresRouteImport.update({
+  id: '/setores',
+  path: '/setores',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedStaffRoute = AuthenticatedStaffRouteImport.update({
-  id: '/staff',
-  path: '/staff',
-  getParentRoute: () => AuthenticatedRoute,
+const SolucoesRoute = SolucoesRouteImport.update({
+  id: '/solucoes',
+  path: '/solucoes',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedSolutionsRoute = AuthenticatedSolutionsRouteImport.update({
-  id: '/solutions',
-  path: '/solutions',
-  getParentRoute: () => AuthenticatedRoute,
-} as any)
-const AuthenticatedPerfilRoute = AuthenticatedPerfilRouteImport.update({
-  id: '/perfil',
-  path: '/perfil',
+const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
 const AuthenticatedDocumentosRoute = AuthenticatedDocumentosRouteImport.update({
@@ -105,36 +85,51 @@ const AuthenticatedDocumentosRoute = AuthenticatedDocumentosRouteImport.update({
   path: '/documentos',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
-const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
-  id: '/dashboard',
-  path: '/dashboard',
+const AuthenticatedPerfilRoute = AuthenticatedPerfilRouteImport.update({
+  id: '/perfil',
+  path: '/perfil',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
-const ApiPublicMetricsRoute = ApiPublicMetricsRouteImport.update({
-  id: '/api/public/metrics',
-  path: '/api/public/metrics',
+const AuthenticatedSolutionsRoute = AuthenticatedSolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedStaffRoute = AuthenticatedStaffRouteImport.update({
+  id: '/staff',
+  path: '/staff',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedTicketsRoute = AuthenticatedTicketsRouteImport.update({
+  id: '/tickets',
+  path: '/tickets',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const DocsApiRoute = DocsApiRouteImport.update({
+  id: '/docs/api',
+  path: '/docs/api',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
-  id: '/api/public/health',
-  path: '/api/public/health',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthenticatedTicketsIdRoute = AuthenticatedTicketsIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => AuthenticatedTicketsRoute,
-} as any)
-const AuthenticatedStaffTicketsRoute =
-  AuthenticatedStaffTicketsRouteImport.update({
-    id: '/tickets',
-    path: '/tickets',
+const AuthenticatedStaffAnalyticsRoute =
+  AuthenticatedStaffAnalyticsRouteImport.update({
+    id: '/analytics',
+    path: '/analytics',
     getParentRoute: () => AuthenticatedStaffRoute,
   } as any)
-const AuthenticatedStaffSolutionsRoute =
-  AuthenticatedStaffSolutionsRouteImport.update({
-    id: '/solutions',
-    path: '/solutions',
+const AuthenticatedStaffAuditRoute = AuthenticatedStaffAuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => AuthenticatedStaffRoute,
+} as any)
+const AuthenticatedStaffBiRoute = AuthenticatedStaffBiRouteImport.update({
+  id: '/bi',
+  path: '/bi',
+  getParentRoute: () => AuthenticatedStaffRoute,
+} as any)
+const AuthenticatedStaffDocumentosRoute =
+  AuthenticatedStaffDocumentosRouteImport.update({
+    id: '/documentos',
+    path: '/documentos',
     getParentRoute: () => AuthenticatedStaffRoute,
   } as any)
 const AuthenticatedStaffSectorsRoute =
@@ -143,28 +138,33 @@ const AuthenticatedStaffSectorsRoute =
     path: '/sectors',
     getParentRoute: () => AuthenticatedStaffRoute,
   } as any)
-const AuthenticatedStaffDocumentosRoute =
-  AuthenticatedStaffDocumentosRouteImport.update({
-    id: '/documentos',
-    path: '/documentos',
+const AuthenticatedStaffSolutionsRoute =
+  AuthenticatedStaffSolutionsRouteImport.update({
+    id: '/solutions',
+    path: '/solutions',
     getParentRoute: () => AuthenticatedStaffRoute,
   } as any)
-const AuthenticatedStaffBiRoute = AuthenticatedStaffBiRouteImport.update({
-  id: '/bi',
-  path: '/bi',
-  getParentRoute: () => AuthenticatedStaffRoute,
-} as any)
-const AuthenticatedStaffAuditRoute = AuthenticatedStaffAuditRouteImport.update({
-  id: '/audit',
-  path: '/audit',
-  getParentRoute: () => AuthenticatedStaffRoute,
-} as any)
-const AuthenticatedStaffAnalyticsRoute =
-  AuthenticatedStaffAnalyticsRouteImport.update({
-    id: '/analytics',
-    path: '/analytics',
+const AuthenticatedStaffTicketsRoute =
+  AuthenticatedStaffTicketsRouteImport.update({
+    id: '/tickets',
+    path: '/tickets',
     getParentRoute: () => AuthenticatedStaffRoute,
   } as any)
+const AuthenticatedTicketsIdRoute = AuthenticatedTicketsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AuthenticatedTicketsRoute,
+} as any)
+const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
+  id: '/api/public/health',
+  path: '/api/public/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicMetricsRoute = ApiPublicMetricsRouteImport.update({
+  id: '/api/public/metrics',
+  path: '/api/public/metrics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthenticatedStaffTicketsIdRoute =
   AuthenticatedStaffTicketsIdRouteImport.update({
     id: '/$id',
@@ -356,46 +356,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/solucoes': {
-      id: '/solucoes'
-      path: '/solucoes'
-      fullPath: '/solucoes'
-      preLoaderRoute: typeof SolucoesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/setores': {
-      id: '/setores'
-      path: '/setores'
-      fullPath: '/setores'
-      preLoaderRoute: typeof SetoresRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reset-password': {
-      id: '/reset-password'
-      path: '/reset-password'
-      fullPath: '/reset-password'
-      preLoaderRoute: typeof ResetPasswordRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esqueci-senha': {
-      id: '/esqueci-senha'
-      path: '/esqueci-senha'
-      fullPath: '/esqueci-senha'
-      preLoaderRoute: typeof EsqueciSenhaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cadastro': {
-      id: '/cadastro'
-      path: '/cadastro'
-      fullPath: '/cadastro'
-      preLoaderRoute: typeof CadastroRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated': {
@@ -405,46 +370,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/cadastro': {
+      id: '/cadastro'
+      path: '/cadastro'
+      fullPath: '/cadastro'
+      preLoaderRoute: typeof CadastroRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/docs/api': {
-      id: '/docs/api'
-      path: '/docs/api'
-      fullPath: '/docs/api'
-      preLoaderRoute: typeof DocsApiRouteImport
+    '/esqueci-senha': {
+      id: '/esqueci-senha'
+      path: '/esqueci-senha'
+      fullPath: '/esqueci-senha'
+      preLoaderRoute: typeof EsqueciSenhaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/tickets': {
-      id: '/_authenticated/tickets'
-      path: '/tickets'
-      fullPath: '/tickets'
-      preLoaderRoute: typeof AuthenticatedTicketsRouteImport
-      parentRoute: typeof AuthenticatedRoute
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/staff': {
-      id: '/_authenticated/staff'
-      path: '/staff'
-      fullPath: '/staff'
-      preLoaderRoute: typeof AuthenticatedStaffRouteImport
-      parentRoute: typeof AuthenticatedRoute
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/solutions': {
-      id: '/_authenticated/solutions'
-      path: '/solutions'
-      fullPath: '/solutions'
-      preLoaderRoute: typeof AuthenticatedSolutionsRouteImport
-      parentRoute: typeof AuthenticatedRoute
+    '/setores': {
+      id: '/setores'
+      path: '/setores'
+      fullPath: '/setores'
+      preLoaderRoute: typeof SetoresRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/perfil': {
-      id: '/_authenticated/perfil'
-      path: '/perfil'
-      fullPath: '/perfil'
-      preLoaderRoute: typeof AuthenticatedPerfilRouteImport
+    '/solucoes': {
+      id: '/solucoes'
+      path: '/solucoes'
+      fullPath: '/solucoes'
+      preLoaderRoute: typeof SolucoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/dashboard': {
+      id: '/_authenticated/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
     '/_authenticated/documentos': {
@@ -454,67 +426,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDocumentosRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
-    '/_authenticated/dashboard': {
-      id: '/_authenticated/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+    '/_authenticated/perfil': {
+      id: '/_authenticated/perfil'
+      path: '/perfil'
+      fullPath: '/perfil'
+      preLoaderRoute: typeof AuthenticatedPerfilRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
-    '/api/public/metrics': {
-      id: '/api/public/metrics'
-      path: '/api/public/metrics'
-      fullPath: '/api/public/metrics'
-      preLoaderRoute: typeof ApiPublicMetricsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/health': {
-      id: '/api/public/health'
-      path: '/api/public/health'
-      fullPath: '/api/public/health'
-      preLoaderRoute: typeof ApiPublicHealthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_authenticated/tickets/$id': {
-      id: '/_authenticated/tickets/$id'
-      path: '/$id'
-      fullPath: '/tickets/$id'
-      preLoaderRoute: typeof AuthenticatedTicketsIdRouteImport
-      parentRoute: typeof AuthenticatedTicketsRoute
-    }
-    '/_authenticated/staff/tickets': {
-      id: '/_authenticated/staff/tickets'
-      path: '/tickets'
-      fullPath: '/staff/tickets'
-      preLoaderRoute: typeof AuthenticatedStaffTicketsRouteImport
-      parentRoute: typeof AuthenticatedStaffRoute
-    }
-    '/_authenticated/staff/solutions': {
-      id: '/_authenticated/staff/solutions'
+    '/_authenticated/solutions': {
+      id: '/_authenticated/solutions'
       path: '/solutions'
-      fullPath: '/staff/solutions'
-      preLoaderRoute: typeof AuthenticatedStaffSolutionsRouteImport
-      parentRoute: typeof AuthenticatedStaffRoute
+      fullPath: '/solutions'
+      preLoaderRoute: typeof AuthenticatedSolutionsRouteImport
+      parentRoute: typeof AuthenticatedRoute
     }
-    '/_authenticated/staff/sectors': {
-      id: '/_authenticated/staff/sectors'
-      path: '/sectors'
-      fullPath: '/staff/sectors'
-      preLoaderRoute: typeof AuthenticatedStaffSectorsRouteImport
-      parentRoute: typeof AuthenticatedStaffRoute
+    '/_authenticated/staff': {
+      id: '/_authenticated/staff'
+      path: '/staff'
+      fullPath: '/staff'
+      preLoaderRoute: typeof AuthenticatedStaffRouteImport
+      parentRoute: typeof AuthenticatedRoute
     }
-    '/_authenticated/staff/documentos': {
-      id: '/_authenticated/staff/documentos'
-      path: '/documentos'
-      fullPath: '/staff/documentos'
-      preLoaderRoute: typeof AuthenticatedStaffDocumentosRouteImport
-      parentRoute: typeof AuthenticatedStaffRoute
+    '/_authenticated/tickets': {
+      id: '/_authenticated/tickets'
+      path: '/tickets'
+      fullPath: '/tickets'
+      preLoaderRoute: typeof AuthenticatedTicketsRouteImport
+      parentRoute: typeof AuthenticatedRoute
     }
-    '/_authenticated/staff/bi': {
-      id: '/_authenticated/staff/bi'
-      path: '/bi'
-      fullPath: '/staff/bi'
-      preLoaderRoute: typeof AuthenticatedStaffBiRouteImport
+    '/docs/api': {
+      id: '/docs/api'
+      path: '/docs/api'
+      fullPath: '/docs/api'
+      preLoaderRoute: typeof DocsApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/staff/analytics': {
+      id: '/_authenticated/staff/analytics'
+      path: '/analytics'
+      fullPath: '/staff/analytics'
+      preLoaderRoute: typeof AuthenticatedStaffAnalyticsRouteImport
       parentRoute: typeof AuthenticatedStaffRoute
     }
     '/_authenticated/staff/audit': {
@@ -524,12 +475,61 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedStaffAuditRouteImport
       parentRoute: typeof AuthenticatedStaffRoute
     }
-    '/_authenticated/staff/analytics': {
-      id: '/_authenticated/staff/analytics'
-      path: '/analytics'
-      fullPath: '/staff/analytics'
-      preLoaderRoute: typeof AuthenticatedStaffAnalyticsRouteImport
+    '/_authenticated/staff/bi': {
+      id: '/_authenticated/staff/bi'
+      path: '/bi'
+      fullPath: '/staff/bi'
+      preLoaderRoute: typeof AuthenticatedStaffBiRouteImport
       parentRoute: typeof AuthenticatedStaffRoute
+    }
+    '/_authenticated/staff/documentos': {
+      id: '/_authenticated/staff/documentos'
+      path: '/documentos'
+      fullPath: '/staff/documentos'
+      preLoaderRoute: typeof AuthenticatedStaffDocumentosRouteImport
+      parentRoute: typeof AuthenticatedStaffRoute
+    }
+    '/_authenticated/staff/sectors': {
+      id: '/_authenticated/staff/sectors'
+      path: '/sectors'
+      fullPath: '/staff/sectors'
+      preLoaderRoute: typeof AuthenticatedStaffSectorsRouteImport
+      parentRoute: typeof AuthenticatedStaffRoute
+    }
+    '/_authenticated/staff/solutions': {
+      id: '/_authenticated/staff/solutions'
+      path: '/solutions'
+      fullPath: '/staff/solutions'
+      preLoaderRoute: typeof AuthenticatedStaffSolutionsRouteImport
+      parentRoute: typeof AuthenticatedStaffRoute
+    }
+    '/_authenticated/staff/tickets': {
+      id: '/_authenticated/staff/tickets'
+      path: '/tickets'
+      fullPath: '/staff/tickets'
+      preLoaderRoute: typeof AuthenticatedStaffTicketsRouteImport
+      parentRoute: typeof AuthenticatedStaffRoute
+    }
+    '/_authenticated/tickets/$id': {
+      id: '/_authenticated/tickets/$id'
+      path: '/$id'
+      fullPath: '/tickets/$id'
+      preLoaderRoute: typeof AuthenticatedTicketsIdRouteImport
+      parentRoute: typeof AuthenticatedTicketsRoute
+    }
+    '/api/public/health': {
+      id: '/api/public/health'
+      path: '/api/public/health'
+      fullPath: '/api/public/health'
+      preLoaderRoute: typeof ApiPublicHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/metrics': {
+      id: '/api/public/metrics'
+      path: '/api/public/metrics'
+      fullPath: '/api/public/metrics'
+      preLoaderRoute: typeof ApiPublicMetricsRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/_authenticated/staff/tickets/$id': {
       id: '/_authenticated/staff/tickets/$id'

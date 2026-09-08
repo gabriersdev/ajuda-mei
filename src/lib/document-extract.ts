@@ -1,4 +1,4 @@
-// Extratores simples a partir do texto OCR. Best-effort — sempre exigem validação humana.
+// Extratores simples a partir do texto OCR. Best-effort - sempre exigem validação humana.
 
 export type ExtractedFields = {
   nome?: string;

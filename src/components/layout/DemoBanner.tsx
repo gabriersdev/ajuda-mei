@@ -13,7 +13,7 @@ export function DemoBanner() {
       <Info className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
       <span className="flex-1 text-warning-foreground/90">
         <strong className="font-semibold">Modo demonstração ativo</strong>
-        <span className="ml-1 text-muted-foreground">— dados simulados para testes</span>
+        <span className="ml-1 text-muted-foreground">- dados simulados para testes</span>
       </span>
       <button
         type="button"

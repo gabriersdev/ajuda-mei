@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 export const Route = createFileRoute("/docs/api")({
   head: () => ({
     meta: [
-      { title: "API Docs — Sala do Empreendedor" },
+      { title: "API Docs - Sala do Empreendedor" },
       { name: "description", content: "Documentação OpenAPI/Swagger da API." },
       { name: "robots", content: "noindex" },
     ],

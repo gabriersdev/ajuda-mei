@@ -5,7 +5,7 @@ import { listMyTickets } from "@/lib/tickets.functions";
 import { StatusBadge } from "./dashboard";
 
 export const Route = createFileRoute("/_authenticated/tickets")({
-  head: () => ({ meta: [{ title: "Meus tickets — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Meus tickets - Sala do Empreendedor" }] }),
   component: TicketsPage,
 });
 

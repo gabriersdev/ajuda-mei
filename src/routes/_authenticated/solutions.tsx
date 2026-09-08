@@ -12,7 +12,7 @@ import { SolutionFeedback } from "@/components/solutions/SolutionFeedback";
 import { useAnalytics } from "@/lib/use-analytics";
 
 export const Route = createFileRoute("/_authenticated/solutions")({
-  head: () => ({ meta: [{ title: "Base de soluções — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Base de soluções - Sala do Empreendedor" }] }),
   component: SolutionsPage,
 });
 

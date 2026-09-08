@@ -14,13 +14,13 @@ import { usePageView } from "@/lib/use-analytics";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sala do Empreendedor — Atendimento ao MEI" },
+      { title: "Sala do Empreendedor - Atendimento ao MEI" },
       {
         name: "description",
         content:
           "Tire dúvidas sobre DAS, declaração anual, regularização e mais. Atendimento humano e inteligente para o MEI.",
       },
-      { property: "og:title", content: "Sala do Empreendedor — Atendimento ao MEI" },
+      { property: "og:title", content: "Sala do Empreendedor - Atendimento ao MEI" },
       {
         property: "og:description",
         content: "Atendimento humano e inteligente para o Microempreendedor Individual.",

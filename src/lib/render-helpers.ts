@@ -1,5 +1,5 @@
 /**
- * Defensive render helpers — evita React error #31 (render de objeto).
+ * Defensive render helpers - evita React error #31 (render de objeto).
  * Soluções legacy podem ter passo_a_passo como string[] OU { ordem, texto }[].
  */
 export function passoText(p: unknown): string {

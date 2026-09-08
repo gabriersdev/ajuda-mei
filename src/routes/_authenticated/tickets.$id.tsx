@@ -13,7 +13,7 @@ import { EvaluationDialog } from "@/components/tickets/EvaluationDialog";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/_authenticated/tickets/$id")({
-  head: () => ({ meta: [{ title: "Detalhe do ticket — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Detalhe do ticket - Sala do Empreendedor" }] }),
   component: MyTicketDetail,
 });
 

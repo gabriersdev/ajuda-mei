@@ -13,7 +13,7 @@ import {
 } from "@/lib/masks";
 
 export const Route = createFileRoute("/cadastro")({
-  head: () => ({ meta: [{ title: "Cadastro MEI — Sala do Empreendedor" }] }),
+  head: () => ({ meta: [{ title: "Cadastro MEI - Sala do Empreendedor" }] }),
   component: SignupPage,
 });
 

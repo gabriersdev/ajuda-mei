@@ -28,7 +28,7 @@ const trackInput = z.object({
 });
 
 // Aceita eventos anônimos OU autenticados. Sem middleware para não bloquear
-// chamadas públicas — usa supabaseAdmin com payload validado por Zod.
+// chamadas públicas - usa supabaseAdmin com payload validado por Zod.
 export const trackEvent = createServerFn({ method: "POST" })
   .inputValidator((d: z.input<typeof trackInput>) => trackInput.parse(d))
   .handler(async ({ data }) => {

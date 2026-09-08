@@ -10,7 +10,7 @@ import { usePageView, useAnalytics } from "@/lib/use-analytics";
 export const Route = createFileRoute("/setores")({
   head: () => ({
     meta: [
-      { title: "Setores e órgãos parceiros — Sala do Empreendedor" },
+      { title: "Setores e órgãos parceiros - Sala do Empreendedor" },
       { name: "description", content: "Contatos oficiais dos setores que atendem o MEI: tributos, vigilância, desenvolvimento econômico e mais." },
       { property: "og:title", content: "Setores parceiros" },
       { property: "og:description", content: "Contatos oficiais dos setores que atendem o MEI." },
